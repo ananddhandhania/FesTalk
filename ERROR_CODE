@@ -1,0 +1,6 @@
+0 - for successful complation of perl script
+2 - If perl script does not exist in the mentioned folder.
+122 - Token is not defined correctly in conf file.
+123 - conf file does not exist in the required folder.
+
+NOTE :- Festival related errors can be read from INI File.

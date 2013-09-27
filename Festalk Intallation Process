@@ -1,0 +1,62 @@
+FESTALK INSTALLATION STEPS :-
+
+1) Install perl 
+   sudo apt-get install perl
+
+2) Install List-MoreUtils-0.33_007 from cpan.org
+  
+   STEPS :- 
+   -Download package from : http://search.cpan.org/~vparseval/List-MoreUtils-0.17/lib/List/MoreUtils.p 
+    [as on 16th January 2013]
+   -tar -xzf  List-MoreUtils-0.33_007.tar.gz
+   -cd List-MoreUtils-0.33_007.tar.gz/
+   -perl Makefile.PL
+   -make
+   -make test
+   -make install
+
+3) Setup an FTP server which has access to festalk folder. Wu-FTPD is the preffered FTP server. 
+
+4) Change permissions of conf,ini and wave folders inside festalk to read & write.
+
+5) Make changes to system.conf
+ 
+   -LOCALHOST is the IP Address of system running festival server, that is local computer.
+   -PORT is the port which you want to run the socket for FESTALK
+   -home is the address of the folder in which the festalk system is kept.
+     for eg - if it is kept in /home/ravis/ then home address is /home/ravis/festalk/ .
+
+6) Start server
+   - Change working directory to go to festalk folder.
+   - perl server.pl
+
+NOTE :-  You can see the error codes returned by socket in file named ERROR_CODE in festalk folder.
+
+FESTIVAL CHANGES :-
+
+1) You can add any new Language in Language_ID.conf with a new language_Id (a number) and festival command for setting that language. Then you can send that number in conf file.
+
+Conf FORMAT :-
+
+Text "ENTER YOUR TEXT HERE"
+Language_ID 1
+Token asdj
+
+HOW TO USE IT FROM OTHER SIDE ????
+
+1) Send generated conf file in "conf" folder of festalk.
+
+2) To the socket with ipaddress and port defined in system.conf, send message "conf_file_name".
+   NOTE :- conf_file name should not be echo_on.
+
+3) Download ini and wave file from ini and wave folder of festalk respectively. Both with the same name as Token specified in conf file.
+
+4) Send command "Delete Token" to delete all the files (conf, ini and wave) to socket. Token is the mentioned token in conf file.
+
+It will work !
+
+For any further queries write to : Anand Dhandhania (ananddhandhania11@gmail.com)
+
+
+
+   

@@ -1,0 +1,3 @@
+(voice_rab_diphone)
+(utt.save.wave (utt.synth (Utterance Text "we are testing website on cloud computer ")) "/home/ravis/opendir/wave/mohit")
+(quit)

@@ -1,0 +1,3 @@
+(voice_rab_diphone)
+(utt.save.wave (utt.synth (Utterance Text "this is a test")) "/home/ravis/opendir/wave/tryin")
+(quit)

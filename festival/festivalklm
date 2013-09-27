@@ -1,0 +1,3 @@
+(voice_rab_diphone)
+(utt.save.wave (utt.synth (Utterance Text "We are trying to test dll ")) "/home/ravis/opendir/wave/klm")
+(quit)

@@ -1,0 +1,3 @@
+(voice_rab_diphone)
+(utt.save.wave (utt.synth (Utterance Text "aryan 1 realeased")) "/home/ravis/opendir/wave/aryana")
+(quit)
